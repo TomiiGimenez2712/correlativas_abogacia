@@ -1,0 +1,264 @@
+/* Reset básico conservado */
+@import url('reset.css');
+
+:root {
+    --detalle: #8b2638;
+    --fondo: #f5f5f5;
+    --texto: #222;
+    --bloqueado: #e0e0e0;
+    --habilitado: #cccccc;
+    --aprobado: #8b2638;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--detalle);
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.year_column {
+    margin: 1rem auto;
+    padding: 1rem;
+    border-left: 4px solid var(--detalle);
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.cuatrimestre_year_column {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--detalle);
+    font-size: 1.1rem;
+}
+
+.year_sub_column {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cuatrimestre_column {
+    flex: 1 1 100%;
+    min-width: 280px;
+}
+
+.cuatrimestre_number_column {
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    color: #444;
+}
+
+.subject_column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.subject {
+    flex: 1 1 48%;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 140px;
+}
+
+.status_00 {
+    background-color: var(--bloqueado);
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.status_01 {
+    background-color: var(--habilitado);
+    color: #333;
+    border: 1px solid #aaa;
+}
+
+.status_02 {
+    background-color: var(--aprobado);
+    color: white;
+    font-weight: bold;
+}
+
+button:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.container_bar_progress {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.degree_img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+.bar_tittle {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+progress {
+    width: 100%;
+    max-width: 500px;
+    height: 20px;
+    margin-top: 0.5rem;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--detalle);
+    border-radius: 10px;
+}
+
+#themeButton, .volver-btn {
+    display: none;
+}
+
+/* Botón limpiar fuera del footer */
+#clearButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto;
+    padding: 0 1rem;
+}
+
+#clearButtonWrapper button {
+    background-color: transparent;
+    border: 1px solid var(--detalle);
+    color: var(--detalle);
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+#clearButtonWrapper button:hover {
+    background-color: var(--detalle);
+    color: white;
+
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .subject {
+        flex: 1 1 100%;
+    }
+    .year_sub_column {
+        flex-direction: column;
+    }
+    .cuatrimestre_column {
+        width: 100%;
+    }
+}
+
+/* Estilo header minimalista */
+    .custom-header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color, #ccc);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    }
+
+    .custom-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .custom-logo {
+    height: 60px;
+    margin-right: 20px;
+    }
+
+    .custom-title {
+    flex: 1;
+    text-align: center;
+    }
+
+    .custom-title h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    padding-bottom: 5px;
+    color: var(--primary-color, #8b2638);
+    font-weight: 600;
+    }
+
+    .custom-subtitle {
+    font-size: 0.9rem;
+    color: var(--muted-color, #666);
+    margin: 0;
+    }
+
+    .toggle-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    background-image: var(--toggle-btn-img);
+    background-size: cover;
+    cursor: pointer;
+    }
+
+
