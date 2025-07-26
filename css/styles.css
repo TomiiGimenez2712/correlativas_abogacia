@@ -140,7 +140,7 @@ button:hover:not(:disabled) {
 }
 
 .degree_img {
-    width: 40px;
+    width: 50px;
     vertical-align: middle;
 }
 
@@ -260,5 +260,20 @@ progress::-webkit-progress-value {
     background-size: cover;
     cursor: pointer;
     }
+
+.footer-credits {
+    font-size: 1.1rem;
+    color: #6c757d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.github_img {
+    width: 20px;
+    height: 20px;
+    filter: invert(40%);
+}
 
 
